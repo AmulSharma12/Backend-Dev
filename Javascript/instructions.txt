@@ -3,3 +3,5 @@
     - Vs Code
     - https://codesandbox.io/  (online)
     - https://codepen.io/pen/  (online)
+- 01.Basics
+    - console object
