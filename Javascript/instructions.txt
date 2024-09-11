@@ -5,3 +5,4 @@
     - https://codepen.io/pen/  (online)
 - 01.Basics
     - console object
+    - comment/uncomment  // - for single line comment  & /*  */ - for multi line comment
