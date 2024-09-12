@@ -21,3 +21,16 @@ console.log(name);
 console.log(whatDoYouWannaBecomeInYourLife);
 console.log(gender);
 console.log(instagramHandle);
+
+
+//================================ Primtives Types
+//Number type
+let num = 10;
+console.log(num + num);
+console.log(num - num);
+console.log(num * num);
+console.log(num / num);
+console.log(num % num);
+console.log(num ** num);  //power of number
+console.log(num++);
+console.log(num--);
