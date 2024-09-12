@@ -40,7 +40,7 @@ let num = 10;
 
 //NaN  type
 let number = 78;
-console.log(number + undefined);
+// console.log(number + undefined);
 
 /*
 
@@ -54,3 +54,24 @@ Falsy and truthy value
 7. NaN
 
 */
+
+//================================ Compairison operators
+//--------------------------------
+// -> Relational Operators
+console.log(10 > 10); //false
+console.log(10 < 10); //false
+console.log(10 <= 10); //true
+console.log(10 >= 10); //true
+//--------------------------------
+
+//--------------------------------
+// -> Equality operators
+//  ====  -> strict equality operator (type + value)
+//  !==   -> strict not equality operator (type + value)
+//  ==    -> loose eqaulity operator (value check)
+//  !=    -> not equality operator (value check)
+console.log(10 === 10);     //true
+console.log(10 !== 10);     //false
+console.log(10 == 10);      //true
+console.log(10 != 10);      //false
+//--------------------------------
