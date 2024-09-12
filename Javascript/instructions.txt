@@ -6,3 +6,7 @@
 - 01.Basics
     - console object
     - comment/uncomment  // - for single line comment  & /*  */ - for multi line comment
+    - Variables 
+        - var/let/const
+        - let is used for storing the values that can be changed later
+        - const is once decalred can't be modified later on.

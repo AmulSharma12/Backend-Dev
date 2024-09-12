@@ -10,3 +10,14 @@ Multi
 line 
 comment
 */
+
+//================================= Variables - challenge
+let name = "Amul Sharma";
+let whatDoYouWannaBecomeInYourLife = "Programmer";
+const gender = "MALE";
+let instagramHandle = "https://instagram.com/amul_op____";
+
+console.log(name);
+console.log(whatDoYouWannaBecomeInYourLife);
+console.log(gender);
+console.log(instagramHandle);
