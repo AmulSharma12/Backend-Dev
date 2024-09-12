@@ -56,22 +56,63 @@ Falsy and truthy value
 */
 
 //================================ Compairison operators
-//--------------------------------
-// -> Relational Operators
-console.log(10 > 10); //false
-console.log(10 < 10); //false
-console.log(10 <= 10); //true
-console.log(10 >= 10); //true
+//-------------- Relational Operators ------------------
+
+// console.log(10 > 10); //false
+// console.log(10 < 10); //false
+// console.log(10 <= 10); //true
+// console.log(10 >= 10); //true
 //--------------------------------
 
-//--------------------------------
-// -> Equality operators
+//---------------- Equality operators ----------------
+
 //  ====  -> strict equality operator (type + value)
 //  !==   -> strict not equality operator (type + value)
 //  ==    -> loose eqaulity operator (value check)
 //  !=    -> not equality operator (value check)
-console.log(10 === 10);     //true
-console.log(10 !== 10);     //false
-console.log(10 == 10);      //true
-console.log(10 != 10);      //false
+
+// console.log(10 === 10);     //true
+// console.log(10 !== 10);     //false
+// console.log(10 == 10);      //true
+// console.log(10 != 10);      //false
 //--------------------------------
+
+//================================ String in javascript
+let firstName = "  Amul         ";
+let secondName = `Shxrma`;
+
+// 1. concatenation
+const fullName = firstName.concat(secondName);
+console.log(fullName);
+
+// 2. Append something
+// firstName += "something added"
+console.log(firstName);
+
+// 3. length
+console.log(firstName.length);
+
+// 4. Cases
+console.log(firstName.toUpperCase());
+console.log(firstName.toLowerCase());
+
+// 5. Slice
+console.log(firstName.slice(0, 3));
+
+// 6. split and join
+console.log(firstName.split(""));
+console.log(firstName.split("").join("-"));
+console.log(firstName.split("u"));
+console.log(firstName.split("u").join("-"));
+
+// 7. includes
+console.log(firstName.includes("u"));
+
+// 8. Trim method
+console.log(firstName);
+console.log(firstName.trim());
+
+// 9. Bacticks
+const myAge = 23;
+const fullNameWithAge = `My full name is ${firstName.trim()} ${secondName.trim()} and my age is ${myAge}`;
+console.log(fullNameWithAge);
