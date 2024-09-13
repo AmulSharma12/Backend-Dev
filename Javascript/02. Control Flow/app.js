@@ -56,3 +56,20 @@
 // 1. --> Logical And (&&) - if both true then true otherwise false
 // 2. --> Logical OR (||)    if both false then false otherwise true
 // 3. --> NOT        (!)     if true then false and vice versa.
+
+
+//=================================== JS - Arrays
+let score = [];
+let names = [];
+
+score = [90,20,30,40];
+names = ["Amul","Chirag", "Ankit", "Himanshu"];
+console.log(score);
+console.log(names);
+console.log(names.slice(0,2));
+console.log(names.includes("Amul"));
+console.log(names.join("-"));
+console.log(score.join("-"));
+console.log(names.sort());
+console.log(score.sort());
+console.log(names.reverse());
