@@ -33,19 +33,26 @@
 
 //=================================== JS - Loops
 //------------------------- for loop and nested loop
-for(let ind = 0; ind <= 5; ind++)
-{
-    console.log('--------- outer loop --------------');
-    //nested loop
-    for(let j = 0; j<=3; j++){
-        console.log(ind , j);
-    }
-}
+// for(let ind = 0; ind <= 5; ind++)
+// {
+//     console.log('--------- outer loop --------------');
+//     //nested loop
+//     for(let j = 0; j<=3; j++){
+//         console.log(ind , j);
+//     }
+// }
 
 
-//while loop   -    while(condition) {....}
-let i = 1;
-while(i<=3){
-    console.log(i);
-    i++;
-}
+// //while loop   -    while(condition) {....}
+// let i = 1;
+// while(i<=3){
+//     console.log(i);
+//     i++;
+// }
+
+
+
+//=================================== JS - Logical operators
+// 1. --> Logical And (&&) - if both true then true otherwise false
+// 2. --> Logical OR (||)    if both false then false otherwise true
+// 3. --> NOT        (!)     if true then false and vice versa.
