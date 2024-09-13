@@ -83,36 +83,65 @@ let secondName = `Shxrma`;
 
 // 1. concatenation
 const fullName = firstName.concat(secondName);
-console.log(fullName);
+// console.log(fullName);
 
 // 2. Append something
 // firstName += "something added"
-console.log(firstName);
+// console.log(firstName);
 
 // 3. length
-console.log(firstName.length);
+// console.log(firstName.length);
 
 // 4. Cases
-console.log(firstName.toUpperCase());
-console.log(firstName.toLowerCase());
+// console.log(firstName.toUpperCase());
+// console.log(firstName.toLowerCase());
 
 // 5. Slice
-console.log(firstName.slice(0, 3));
+// console.log(firstName.slice(0, 3));
 
 // 6. split and join
-console.log(firstName.split(""));
-console.log(firstName.split("").join("-"));
-console.log(firstName.split("u"));
-console.log(firstName.split("u").join("-"));
+// console.log(firstName.split(""));
+// console.log(firstName.split("").join("-"));
+// console.log(firstName.split("u"));
+// console.log(firstName.split("u").join("-"));
 
 // 7. includes
-console.log(firstName.includes("u"));
+// console.log(firstName.includes("u"));
 
 // 8. Trim method
-console.log(firstName);
-console.log(firstName.trim());
+// console.log(firstName);
+// console.log(firstName.trim());
 
 // 9. Bacticks
 const myAge = 23;
 const fullNameWithAge = `My full name is ${firstName.trim()} ${secondName.trim()} and my age is ${myAge}`;
-console.log(fullNameWithAge);
+// console.log(fullNameWithAge);
+
+
+
+//================================ Type conversion
+let money = "30";
+
+//--------------------- 1. convert string to number
+// money = parseInt(money);
+// money =+money;
+money = Number(money);
+console.log(typeof money);
+
+//--------------------- 2.  convert number to string
+let val = 45;
+
+// val = val.toString();
+// val = String(val);
+
+console.log(val);
+console.log(typeof val);
+
+
+//--------------------- 3. convert string to decimal
+let decimalString = "29.2";
+let decimalValue = parseFloat(decimalString);
+console.log(decimalValue);
+console.log(typeof decimalValue);
+
+ 
