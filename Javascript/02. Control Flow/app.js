@@ -180,23 +180,18 @@
 
 // functionExpressionSecondWay("Phil Dunkerley");
 
-
-
 //=================================== JS - Callback function
-// //Passing function as argument to other function that function passed as argument is called as callback function 
+// //Passing function as argument to other function that function passed as argument is called as callback function
 
-// //example 1 
+// //example 1
 // function showCallFunc(callBackFn){
 //     const value = 10;
 //     callBackFn(value);
 // }
 
-
-
 // showCallFunc(function(value){
 //     console.log(value);
 // })
-
 
 // //example 2
 // function greetings(name, cb){
@@ -204,14 +199,11 @@
 //     cb()
 // }
 
-
 // function callBackFn(){
 //     console.log(`this is callback function`);
 // }
 
 // greetings("Amul Sharma", callBackFn);
-
-
 
 //=================================== JS - Callback function - Challenge
 // function showCallFunc(fn){
@@ -219,24 +211,53 @@
 //     fn(variable);
 // }
 
-
 // showCallFunc((value) => console.log(value));
 
-
-//=================================== JS - Scopes 
+//=================================== JS - Scopes
 // Scope refers to the current context of code which determines the accessibility of variable in javascript
 // There are two types of scope in javascript - global scope and local scope
 // Global scope variable are those that are declared outside the block.
 // Local scope variable are those that are declared inside the block
 
-const globalVariable = 10;
+// const globalVariable = 10;
 
-function demo(){
-    const localVariable = 12;
-    console.log(globalVariable);
-    console.log(localVariable);
+// function demo(){
+//     const localVariable = 12;
+//     console.log(globalVariable);
+//     console.log(localVariable);
+// }
+
+// demo();
+// console.log(globalVariable);
+// console.log(localVariable);  //Reference error - not defined in context not in parent contexts
+
+//=================================== JS - Methods
+// Function inside the object called as methods
+// First way - create a method provide the reference of that method inside the object
+function greet() {
+  return `Hi my name is ${person.name} and my age is ${person.age}`;
 }
 
-demo();
-console.log(globalVariable);
-console.log(localVariable);  //Reference error - not defined in context not in parent contexts
+const person = {
+  name: "Amul Sharma",
+  age: 22,
+  greet,
+};
+
+const result = person.greet();
+console.log(result);
+
+
+
+// Second way - create normally as key: value pair inside the object
+const studentDetails = {
+    name: "Phil Dunkerley",
+    age: 22,
+    greet: function(){
+        return  `Hi my name is ${person.name} and my age is ${person.age}`;
+    }
+}
+
+
+const result2 = studentDetails.greet();
+console.log(result2);
