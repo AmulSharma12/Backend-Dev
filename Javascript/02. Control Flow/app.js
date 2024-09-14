@@ -144,10 +144,43 @@
 
 
 //=================================== JS - Functions (Challenge)
-function myFunction(value1, value2){
-    return value1 * value2;
+// function myFunction(value1, value2){
+//     return value1 * value2;
+// }
+
+// const result = myFunction(3, 3);
+// console.log(result);
+
+//=================================== JS - Function Declaration & Function Expression
+// We can declare function in two ways  - function declaration & function Expression
+// we use function keyword to create a function followed by name 
+functionDeclaration();
+
+function functionDeclaration(){
+    console.log("this ways is called as function declaration also can be invoke before/after where it is created");
 }
 
-const result = myFunction(3, 3);
-console.log(result);
+functionDeclaration();
 
+
+//function expression - By creating function without name assigning it to the variable. You can do it by 2 ways
+//Points need to be remembered
+//1. You must need to assign the function expression to the variable
+//2. You can't invoke before you must need to invoke after the function expression
+
+//--------------- Function expression 1st way
+// functionExpressionFirstWay("Amul Sharma"); //error - ReferenceError: Cannot access 'functionExpressionFirstWay' before initialization
+
+let functionExpressionFirstWay = function (firstExpressionWay){
+    console.log(firstExpressionWay);
+}
+
+functionExpressionFirstWay("Amul Sharma");
+
+//--------------- Function expression 2nd way - creating function expression using arrow function
+let functionExpressionSecondWay =  (value) => {
+    console.log(value);
+}
+
+
+functionExpressionSecondWay();
