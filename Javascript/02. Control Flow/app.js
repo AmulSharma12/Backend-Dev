@@ -234,30 +234,55 @@
 //=================================== JS - Methods
 // Function inside the object called as methods
 // First way - create a method provide the reference of that method inside the object
-function greet() {
-  return `Hi my name is ${person.name} and my age is ${person.age}`;
-}
+// function greet() {
+//   return `Hi my name is ${person.name} and my age is ${person.age}`;
+// }
+
+// const person = {
+//   name: "Amul Sharma",
+//   age: 22,
+//   greet,
+// };
+
+// const result = person.greet();
+// console.log(result);
+
+// // Second way - create normally as key: value pair inside the object
+// const studentDetails = {
+//     name: "Phil Dunkerley",
+//     age: 22,
+//     greet: function(){
+//         return  `Hi my name is ${person.name} and my age is ${person.age}`;
+//     }
+// }
+
+// const result2 = studentDetails.greet();
+// console.log(result2);
+
+//=================================== JS - JSON
+//JSON - Javascript Object notation
+//As it is human readable and also used for transmitting data between the servers as request or response
+//1. property must be double-quoted in json
 
 const person = {
-  name: "Amul Sharma",
+  firstName: "Amul",
+  lastName: "Sharma",
   age: 22,
-  greet,
+  hobbies: ["Reading", "Writing", "Sports", "Roaming"],
+  teachers: {
+    maths: "Ankit",
+    english: "Pradum",
+    sanskrti: "Chirag",
+  },
+  isAdultFilmWatched: true,
+  Sex: "MALE",
 };
 
-const result = person.greet();
-console.log(result);
+//converting Javascript object to JSON string
+const jsonString = JSON.stringify(person);
 
+//converting JSON string to javascript object
+const javascriptObject = JSON.parse(jsonString);
 
-
-// Second way - create normally as key: value pair inside the object
-const studentDetails = {
-    name: "Phil Dunkerley",
-    age: 22,
-    greet: function(){
-        return  `Hi my name is ${person.name} and my age is ${person.age}`;
-    }
-}
-
-
-const result2 = studentDetails.greet();
-console.log(result2);
+console.log(jsonString);
+console.log(javascriptObject);
