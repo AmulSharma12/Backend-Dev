@@ -111,34 +111,43 @@
 // console.log(car);
 
 //=================================== JS - functions
-//creating function without return statement
-function studentDetails() {
-  let studentDetailsList = {
-    firstName: "Amul",
-    LastName: "Sharma",
-    age: 22,
-    classTeacher: "Ruhi",
-    subjects: ["Physics", "Chemistry", "Maths"],
-    isAdult: true,
-    previousClassStatus: {
-      class8: "Passed",
-      class9: "Passed",
-      class10: "Failed",
-    },
-  };
+// //creating function without return statement
+// function studentDetails() {
+//   let studentDetailsList = {
+//     firstName: "Amul",
+//     LastName: "Sharma",
+//     age: 22,
+//     classTeacher: "Ruhi",
+//     subjects: ["Physics", "Chemistry", "Maths"],
+//     isAdult: true,
+//     previousClassStatus: {
+//       class8: "Passed",
+//       class9: "Passed",
+//       class10: "Failed",
+//     },
+//   };
 
-  console.table(studentDetailsList);
+//   console.table(studentDetailsList);
+// }
+
+// studentDetails();
+
+// //creating function with return statement
+// let sum = add(3, 4);
+// console.log(sum);
+
+
+// function add(x, y) {
+//   return x + y;
+// }
+
+
+
+//=================================== JS - Functions (Challenge)
+function myFunction(value1, value2){
+    return value1 * value2;
 }
 
-studentDetails();
-
-//creating function with return statement
-let sum = add(3, 4);
-console.log(sum);
-
-
-function add(x, y) {
-  return x + y;
-}
-
+const result = myFunction(3, 3);
+console.log(result);
 
