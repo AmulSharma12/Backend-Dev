@@ -5,6 +5,16 @@
 // use of dollar followed by curly braces occupied by variable or expression is totally valid javascript
 // `...... ${}.........`
 
-let name = "Amul Sharma";
-let age = 22;
-console.log(`hello my name is ${name} and my age is ${age}`);
+// let name = "Amul Sharma";
+// let age = 22;
+// console.log(`hello my name is ${name} and my age is ${age}`);
+
+//=================================== JS - Template strings challenge
+const firstName = "Tom";
+const secondName = "Jerry";
+
+const templateString = `The quick
+brown fox 
+jumps over
+the lazy dog ${firstName} ${secondName}`;
+console.log(templateString);
