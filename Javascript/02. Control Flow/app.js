@@ -214,10 +214,29 @@
 
 
 //=================================== JS - Callback function - Challenge
-function showCallFunc(fn){
-    let variable = 10;
-    fn(variable);
+// function showCallFunc(fn){
+//     let variable = 10;
+//     fn(variable);
+// }
+
+
+// showCallFunc((value) => console.log(value));
+
+
+//=================================== JS - Scopes 
+// Scope refers to the current context of code which determines the accessibility of variable in javascript
+// There are two types of scope in javascript - global scope and local scope
+// Global scope variable are those that are declared outside the block.
+// Local scope variable are those that are declared inside the block
+
+const globalVariable = 10;
+
+function demo(){
+    const localVariable = 12;
+    console.log(globalVariable);
+    console.log(localVariable);
 }
 
-
-showCallFunc((value) => console.log(value));
+demo();
+console.log(globalVariable);
+console.log(localVariable);  //Reference error - not defined in context not in parent contexts
