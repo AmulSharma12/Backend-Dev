@@ -10,11 +10,24 @@
 // console.log(`hello my name is ${name} and my age is ${age}`);
 
 //=================================== JS - Template strings challenge
-const firstName = "Tom";
-const secondName = "Jerry";
+// const firstName = "Tom";
+// const secondName = "Jerry";
 
-const templateString = `The quick
-brown fox 
-jumps over
-the lazy dog ${firstName} ${secondName}`;
-console.log(templateString);
+// const templateString = `The quick
+// brown fox
+// jumps over
+// the lazy dog ${firstName} ${secondName}`;
+// console.log(templateString);
+
+
+//=================================== JS - Arrow function
+const nonParameterisedArrowFunction =  () => console.log("arrow function - non parameterised");
+const parameterisedArrowFunction = (name) => console.log(`parameterised arrow function - my name is ${name}`);
+const newFunction = (name) => {
+    console.log("arrow function");
+    console.log(`my name is ${name}`);
+}
+
+nonParameterisedArrowFunction();
+parameterisedArrowFunction("Amul Sharma");
+newFunction("Ritik roshan");
