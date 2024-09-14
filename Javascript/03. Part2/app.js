@@ -32,19 +32,51 @@
 // newFunction("Ritik roshan");
 
 //=================================== JS - Arrow Function Challenge
-setTimeout(() => {
-  console.log("function1 invoked");
-  setTimeout(() => {
-    console.log("Function 2 invoked");
-    setTimeout(() => {
-      console.log("Function 3 invoked");
-      setTimeout(() => {
-        console.log("Function 4 invoked");
-        setTimeout(() => {
-          console.log("Function 5 invoked");
-          alert("completed");
-        }, 2000);
-      }, 2000);
-    }, 2000);
-  }, 2000);
-}, 2000);
+// setTimeout(() => {
+//   console.log("function1 invoked");
+//   setTimeout(() => {
+//     console.log("Function 2 invoked");
+//     setTimeout(() => {
+//       console.log("Function 3 invoked");
+//       setTimeout(() => {
+//         console.log("Function 4 invoked");
+//         setTimeout(() => {
+//           console.log("Function 5 invoked");
+//           alert("completed");
+//         }, 2000);
+//       }, 2000);
+//     }, 2000);
+//   }, 2000);
+// }, 2000);
+
+//=================================== JS - ES6 - Enhanced Object Literals
+//1. --> First enhancment for object if properties and value is same so we can utilise once.
+// function user(name, age) {
+//   return {
+//     // name: name,
+//     // age:age
+//     name,
+//     age,
+//   };
+// }
+
+// const rohit = user("Rohit Sharma", 34);
+// const virat = user("Virat Kohli", 32);
+
+// console.log(rohit);
+// console.log(virat);
+
+
+//2. --> Use of method(function inside object) in enhanced object literal
+function user(name, age) {
+    return {
+      name,
+      age,
+      intro: () =>{
+        console.log(`my name is ${name} and my age is ${age}`)
+      }
+    };
+  }
+
+const virat = user("Virat kohli", 32);
+console.log(virat.intro());
