@@ -67,32 +67,46 @@
 // console.log(names.reverse());
 
 //=================================== JS - Objects
-const person = {
-  firstName: "Amul",
-  lastName: "Sharma",
-  age: 22,
-  location: ["MP", "JABALPUR"],
-  isAdult: true,
-  10: "Ten",
+// const person = {
+//   firstName: "Amul",
+//   lastName: "Sharma",
+//   age: 22,
+//   location: ["MP", "JABALPUR"],
+//   isAdult: true,
+//   10: "Ten",
+// };
+
+// console.log(person);
+// console.log(typeof person);
+
+// //Accessing items from object using dot operator
+// console.log(person.location);
+
+// //Accessing items from object using brackets
+// console.log(person["location"]);
+
+// //when we required these
+// // console.log(person.10);    //error - Uncaught SyntaxError: missing ) after argument list
+// console.log(person["10"]);
+
+// //for adding new properties to the object
+// person.classTeacher = "Alex";
+// console.log(person.classTeacher);
+
+// //for deleting the properties from the object
+// delete person.classTeacher;
+// console.log(person.classTeacher);
+
+//=================================== JS - Objects Challenge
+const car = {
+    type: "Maruti",
+    model: "399",
+    color: "white"
 };
 
-console.log(person);
-console.log(typeof person);
+console.log(typeof car);
+car.type = "toyota";
+car.wheels = "4";
 
-//Accessing items from object using dot operator
-console.log(person.location);
+console.log(car);
 
-//Accessing items from object using brackets
-console.log(person["location"]);
-
-//when we required these
-// console.log(person.10);    //error - Uncaught SyntaxError: missing ) after argument list
-console.log(person["10"]);
-
-//for adding new properties to the object
-person.classTeacher = "Alex";
-console.log(person.classTeacher);
-
-//for deleting the properties from the object
-delete person.classTeacher;
-console.log(person.classTeacher);
