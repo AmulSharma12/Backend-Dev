@@ -288,21 +288,34 @@
 // console.log(javascriptObject);
 
 //=================================== JS - Date time
-const date = new Date();
-console.log(date);
+// const date = new Date();
+// console.log(date);
 
-const year = date.getFullYear();
-const month = date.getMonth();
-const day = date.getDay();
-const hours = date.getHours();
-const minutes = date.getMinutes();
-const milliseconds = date.getMilliseconds();
+// const year = date.getFullYear();
+// const month = date.getMonth();
+// const day = date.getDay();
+// const hours = date.getHours();
+// const minutes = date.getMinutes();
+// const milliseconds = date.getMilliseconds();
 
-console.log(year);
-console.log(month);
-console.log(day);
-console.log(hours);
-console.log(minutes);
-console.log(milliseconds);
+// console.log(year);
+// console.log(month);
+// console.log(day);
+// console.log(hours);
+// console.log(minutes);
+// console.log(milliseconds);
 
+//=================================== JS - setTimeout & setInterval
+//setInterval(() => console.log("will execute at specific interval", 1000));
+// setTimeout(() => console.log("will execute at after this time period"), 2000);
 
+// stop the interval after 10 seconds
+const intervalId = setInterval(function name(params) {
+  console.log(`this function is executed at being interval`);
+}, 1000);
+
+//stop the interval after 10 second
+setTimeout(function () {
+  clearInterval(intervalId);
+  console.log(`interval stopped`);
+}, 10000);
