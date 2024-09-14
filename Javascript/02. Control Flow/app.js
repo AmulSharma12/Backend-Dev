@@ -98,15 +98,47 @@
 // console.log(person.classTeacher);
 
 //=================================== JS - Objects Challenge
-const car = {
-    type: "Maruti",
-    model: "399",
-    color: "white"
-};
+// const car = {
+//     type: "Maruti",
+//     model: "399",
+//     color: "white"
+// };
 
-console.log(typeof car);
-car.type = "toyota";
-car.wheels = "4";
+// console.log(typeof car);
+// car.type = "toyota";
+// car.wheels = "4";
 
-console.log(car);
+// console.log(car);
+
+//=================================== JS - functions
+//creating function without return statement
+function studentDetails() {
+  let studentDetailsList = {
+    firstName: "Amul",
+    LastName: "Sharma",
+    age: 22,
+    classTeacher: "Ruhi",
+    subjects: ["Physics", "Chemistry", "Maths"],
+    isAdult: true,
+    previousClassStatus: {
+      class8: "Passed",
+      class9: "Passed",
+      class10: "Failed",
+    },
+  };
+
+  console.table(studentDetailsList);
+}
+
+studentDetails();
+
+//creating function with return statement
+let sum = add(3, 4);
+console.log(sum);
+
+
+function add(x, y) {
+  return x + y;
+}
+
 
