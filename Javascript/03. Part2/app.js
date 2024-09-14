@@ -66,17 +66,46 @@
 // console.log(rohit);
 // console.log(virat);
 
-
 //2. --> Use of method(function inside object) in enhanced object literal
-function user(name, age) {
-    return {
-      name,
-      age,
-      intro: () =>{
-        console.log(`my name is ${name} and my age is ${age}`)
-      }
-    };
-  }
+// function user(name, age) {
+//     return {
+//       name,
+//       age,
+//       intro: () =>{
+//         console.log(`my name is ${name} and my age is ${age}`)
+//       }
+//     };
+//   }
 
-const virat = user("Virat kohli", 32);
-console.log(virat.intro());
+// const virat = user("Virat kohli", 32);
+// console.log(virat.intro());
+
+//=================================== JS - ES6 - Enhanced Object Literals Challenge
+// let a = 22;
+// let b = 24;
+// let c = 45;
+
+// const valueAssign = {
+//   a,
+//   b,
+//   c,
+// };
+
+// console.log(valueAssign.a);
+// console.log(valueAssign.b);
+// console.log(valueAssign.c);
+
+function hospitalUser () {
+    return {
+        isAuditCordinatorUser: (isAuditCordinatorUserRight) => isAuditCordinatorUserRight,
+        isAnalystUser: (isAnalystUserRight) => isAnalystUserRight,
+    };
+
+};
+
+const hospitalUser1 = hospitalUser();
+const auditCordinatorUser = hospitalUser1.isAuditCordinatorUser(true);
+const analystUser = hospitalUser1.isAnalystUser(true);
+
+console.log(auditCordinatorUser);
+console.log(analystUser);
