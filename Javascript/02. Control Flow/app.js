@@ -183,30 +183,41 @@
 
 
 //=================================== JS - Callback function
-//Passing function as argument to other function that function passed as argument is called as callback function 
+// //Passing function as argument to other function that function passed as argument is called as callback function 
 
-//example 1 
-function showCallFunc(callBackFn){
-    const value = 10;
-    callBackFn(value);
+// //example 1 
+// function showCallFunc(callBackFn){
+//     const value = 10;
+//     callBackFn(value);
+// }
+
+
+
+// showCallFunc(function(value){
+//     console.log(value);
+// })
+
+
+// //example 2
+// function greetings(name, cb){
+//     console.log(`Hi my name is ${name}`);
+//     cb()
+// }
+
+
+// function callBackFn(){
+//     console.log(`this is callback function`);
+// }
+
+// greetings("Amul Sharma", callBackFn);
+
+
+
+//=================================== JS - Callback function - Challenge
+function showCallFunc(fn){
+    let variable = 10;
+    fn(variable);
 }
 
 
-
-showCallFunc(function(value){
-    console.log(value);
-})
-
-
-//example 2
-function greetings(name, cb){
-    console.log(`Hi my name is ${name}`);
-    cb()
-}
-
-
-function callBackFn(){
-    console.log(`this is callback function`);
-}
-
-greetings("Amul Sharma", callBackFn);
+showCallFunc((value) => console.log(value));
