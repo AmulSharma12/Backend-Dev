@@ -3,20 +3,17 @@
 // else if(condition) {.....}
 // else {....}
 
-
 // let a = 40;
 // let b = 40;
 // if(a > b)   console.log("a is greater than b");
 // else if(a < b)  console.log("a is less than b");
 // else console.log("a is equals b");
 
-
-
 //=================================== Conditionals - Switch statements
 // let x = 1;
 // let bulb;
 // switch(x){
-//     case 0: 
+//     case 0:
 //         bulb = "off";
 //         console.log(bulb);
 //         break;
@@ -30,7 +27,6 @@
 //         break;
 // }
 
-
 //=================================== JS - Loops
 //------------------------- for loop and nested loop
 // for(let ind = 0; ind <= 5; ind++)
@@ -42,7 +38,6 @@
 //     }
 // }
 
-
 // //while loop   -    while(condition) {....}
 // let i = 1;
 // while(i<=3){
@@ -50,26 +45,54 @@
 //     i++;
 // }
 
-
-
 //=================================== JS - Logical operators
 // 1. --> Logical And (&&) - if both true then true otherwise false
 // 2. --> Logical OR (||)    if both false then false otherwise true
 // 3. --> NOT        (!)     if true then false and vice versa.
 
-
 //=================================== JS - Arrays
-let score = [];
-let names = [];
+// let score = [];
+// let names = [];
 
-score = [90,20,30,40];
-names = ["Amul","Chirag", "Ankit", "Himanshu"];
-console.log(score);
-console.log(names);
-console.log(names.slice(0,2));
-console.log(names.includes("Amul"));
-console.log(names.join("-"));
-console.log(score.join("-"));
-console.log(names.sort());
-console.log(score.sort());
-console.log(names.reverse());
+// score = [90,20,30,40];
+// names = ["Amul","Chirag", "Ankit", "Himanshu"];
+// console.log(score);
+// console.log(names);
+// console.log(names.slice(0,2));
+// console.log(names.includes("Amul"));
+// console.log(names.join("-"));
+// console.log(score.join("-"));
+// console.log(names.sort());
+// console.log(score.sort());
+// console.log(names.reverse());
+
+//=================================== JS - Objects
+const person = {
+  firstName: "Amul",
+  lastName: "Sharma",
+  age: 22,
+  location: ["MP", "JABALPUR"],
+  isAdult: true,
+  10: "Ten",
+};
+
+console.log(person);
+console.log(typeof person);
+
+//Accessing items from object using dot operator
+console.log(person.location);
+
+//Accessing items from object using brackets
+console.log(person["location"]);
+
+//when we required these
+// console.log(person.10);    //error - Uncaught SyntaxError: missing ) after argument list
+console.log(person["10"]);
+
+//for adding new properties to the object
+person.classTeacher = "Alex";
+console.log(person.classTeacher);
+
+//for deleting the properties from the object
+delete person.classTeacher;
+console.log(person.classTeacher);
