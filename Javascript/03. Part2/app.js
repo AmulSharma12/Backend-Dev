@@ -95,17 +95,31 @@
 // console.log(valueAssign.b);
 // console.log(valueAssign.c);
 
-function hospitalUser () {
+// function hospitalUser () {
+//     return {
+//         isAuditCordinatorUser: (isAuditCordinatorUserRight) => isAuditCordinatorUserRight,
+//         isAnalystUser: (isAnalystUserRight) => isAnalystUserRight,
+//     };
+
+// };
+
+// const hospitalUser1 = hospitalUser();
+// const auditCordinatorUser = hospitalUser1.isAuditCordinatorUser(true);
+// const analystUser = hospitalUser1.isAnalystUser(true);
+
+// console.log(auditCordinatorUser);
+// console.log(analystUser);
+
+//=================================== JS - ES6 - Default Function Parameter
+//Default function parameter is ES6 feature in which we can provide the default value in parameter
+//so that while invoking the function if we dont provide the value it will take the default value
+let library =  () => {
     return {
-        isAuditCordinatorUser: (isAuditCordinatorUserRight) => isAuditCordinatorUserRight,
-        isAnalystUser: (isAnalystUserRight) => isAnalystUserRight,
+        sum: (a,b = 0) => a + b,
+        multiply: (a,b = 1) => a * b
     };
+}
 
-};
-
-const hospitalUser1 = hospitalUser();
-const auditCordinatorUser = hospitalUser1.isAuditCordinatorUser(true);
-const analystUser = hospitalUser1.isAnalystUser(true);
-
-console.log(auditCordinatorUser);
-console.log(analystUser);
+const maths = library();
+console.log(maths.multiply(2,4));
+console.log(maths.sum(5,32));
