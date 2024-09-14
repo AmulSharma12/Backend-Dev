@@ -264,25 +264,45 @@
 //As it is human readable and also used for transmitting data between the servers as request or response
 //1. property must be double-quoted in json
 
-const person = {
-  firstName: "Amul",
-  lastName: "Sharma",
-  age: 22,
-  hobbies: ["Reading", "Writing", "Sports", "Roaming"],
-  teachers: {
-    maths: "Ankit",
-    english: "Pradum",
-    sanskrti: "Chirag",
-  },
-  isAdultFilmWatched: true,
-  Sex: "MALE",
-};
+// const person = {
+//   firstName: "Amul",
+//   lastName: "Sharma",
+//   age: 22,
+//   hobbies: ["Reading", "Writing", "Sports", "Roaming"],
+//   teachers: {
+//     maths: "Ankit",
+//     english: "Pradum",
+//     sanskrti: "Chirag",
+//   },
+//   isAdultFilmWatched: true,
+//   Sex: "MALE",
+// };
 
-//converting Javascript object to JSON string
-const jsonString = JSON.stringify(person);
+// //converting Javascript object to JSON string
+// const jsonString = JSON.stringify(person);
 
-//converting JSON string to javascript object
-const javascriptObject = JSON.parse(jsonString);
+// //converting JSON string to javascript object
+// const javascriptObject = JSON.parse(jsonString);
 
-console.log(jsonString);
-console.log(javascriptObject);
+// console.log(jsonString);
+// console.log(javascriptObject);
+
+//=================================== JS - Date time
+const date = new Date();
+console.log(date);
+
+const year = date.getFullYear();
+const month = date.getMonth();
+const day = date.getDay();
+const hours = date.getHours();
+const minutes = date.getMinutes();
+const milliseconds = date.getMilliseconds();
+
+console.log(year);
+console.log(month);
+console.log(day);
+console.log(hours);
+console.log(minutes);
+console.log(milliseconds);
+
+
