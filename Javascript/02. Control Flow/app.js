@@ -310,12 +310,12 @@
 // setTimeout(() => console.log("will execute at after this time period"), 2000);
 
 // stop the interval after 10 seconds
-const intervalId = setInterval(function name(params) {
-  console.log(`this function is executed at being interval`);
-}, 1000);
+// const intervalId = setInterval(function name(params) {
+//   console.log(`this function is executed at being interval`);
+// }, 1000);
 
 //stop the interval after 10 second
-setTimeout(function () {
-  clearInterval(intervalId);
-  console.log(`interval stopped`);
-}, 10000);
+// setTimeout(function () {
+//   clearInterval(intervalId);
+//   console.log(`interval stopped`);
+// }, 10000);
