@@ -253,14 +253,11 @@
 
 //------------------------------> Challenge - Array Destructuring
 
-// const colorsArr = ["red" , "green", "blue", "yellow", "orange"]; 
+// const colorsArr = ["red" , "green", "blue", "yellow", "orange"];
 // const [color1,color2,color3] = colorsArr;
 // console.log(color1);
 // console.log(color2);
 // console.log(color3);
-
-
-
 
 //=================================== JS - Destructuring - Object Destructuring
 //In Object destructuring as well we do unpack object properties in a variable
@@ -277,19 +274,32 @@
 // console.log(personScore);
 // console.log(personAge);
 
-
 //=================================== JS - Destructuring - Function destructuring
-const products ={
-  name:"Snax",
-  items: ["Biscuits","Namkeen"],
-  
-}
+// const products ={
+//   name:"Snax",
+//   items: ["Biscuits","Namkeen"],
 
-function menuItems({name, items:[item1,item2]}){
-  console.log(`${name}`);
-  console.log(`${item1} ${item2}`)
-}
+// }
 
+// function menuItems({name, items:[item1,item2]}){
+//   console.log(`${name}`);
+//   console.log(`${item1} ${item2}`)
+// }
 
-menuItems(products);
+// menuItems(products);
 
+//=================================== JS - Destructuring - Nested Destructuring
+const patientData = [
+  { patientName: "alex", patientAge: 23, patientProcedure: "HipPrimary" },
+  { patientName: "jeremy", patientAge: 43, patientProcedure: "HipPrimary" },
+  { patientName: "Chris", patientAge: 33, patientProcedure: "KneeRevision" },
+  { patientName: "Rany", patientAge: 25, patientProcedure: "KneePrimary" },
+  { patientName: "Dope", patientAge: 29, patientProcedure: "HipRevision" },
+];
+
+const [
+  ,
+  ,
+  { patientName: nameOfPatient, patientProcedure: procedureOfPatient },
+] = patientData;
+console.log(nameOfPatient, procedureOfPatient);
