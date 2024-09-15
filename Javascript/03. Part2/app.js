@@ -265,15 +265,31 @@
 //=================================== JS - Destructuring - Object Destructuring
 //In Object destructuring as well we do unpack object properties in a variable
 //In Object destructuring order does not matter but name does matter.
-const studentDetails = {name:"Amul Sharma", age:23, score:89};
-const {name,score, age} = studentDetails;
-const {name:personName,score:personScore, age:personAge} = studentDetails;
+// const studentDetails = {name:"Amul Sharma", age:23, score:89};
+// const {name,score, age} = studentDetails;
+// const {name:personName,score:personScore, age:personAge} = studentDetails;
 
-console.log(name);
-console.log(score);
-console.log(age);
+// console.log(name);
+// console.log(score);
+// console.log(age);
 
-console.log(personName);
-console.log(personScore);
-console.log(personAge);
+// console.log(personName);
+// console.log(personScore);
+// console.log(personAge);
+
+
+//=================================== JS - Destructuring - Function destructuring
+const products ={
+  name:"Snax",
+  items: ["Biscuits","Namkeen"],
+  
+}
+
+function menuItems({name, items:[item1,item2]}){
+  console.log(`${name}`);
+  console.log(`${item1} ${item2}`)
+}
+
+
+menuItems(products);
 
