@@ -130,75 +130,88 @@
 // ---> Use cases in array
 
 //1. Clone/Copying - it will clone everything from the updated array
-const outSports = ["Cricket", "FootBall"];
-const copySports = [...outSports];
-
-console.log(copySports);
+// const outSports = ["Cricket", "FootBall"];
+// const copySports = [...outSports];
+// console.log(copySports);
 
 // 2. Merge - spread operator use for merging array
-const outDoorSports = ["Cricket", "Football"];
-const inDoorSports = ["Chess", "TableTennis"];
-const sports = [...outDoorSports, ...inDoorSports, "Hockey"];
-console.log(outDoorSports);
-console.log(inDoorSports);
-console.log(sports);
+// const outDoorSports = ["Cricket", "Football"];
+// const inDoorSports = ["Chess", "TableTennis"];
+// const sports = [...outDoorSports, ...inDoorSports, "Hockey"];
+// console.log(outDoorSports);
+// console.log(inDoorSports);
+// console.log(sports);
 
 // 3. spread operators in string
-const name = "Amul Sharma";
-const spreadNameArray = [...name];
-const spreadNameObject = { ...name };
-console.log(spreadNameArray);
-console.log(spreadNameObject);
+// const name = "Amul Sharma";
+// const spreadNameArray = [...name];
+// const spreadNameObject = { ...name };
+// console.log(spreadNameArray);
+// console.log(spreadNameObject);
 
 // ---> Use cases in Object
 
 // 1. cloning object using spread operator
-const studentData = {
-  name: "Amul Sharma",
-  age: 23,
-  class: 12,
-  sex: "MALE",
-  isAdult: true,
-};
+// const studentData = {
+//   name: "Amul Sharma",
+//   age: 23,
+//   class: 12,
+//   sex: "MALE",
+//   isAdult: true,
+// };
 
-const amulData = { ...studentData };
-studentData.score = 89;
-console.log(studentData);
-console.log(amulData);
+// const amulData = { ...studentData };
+// studentData.score = 89;
+// console.log(studentData);
+// console.log(amulData);
 
 // 2.  merging object using spread operator
-const personalData = {
-  name: "Amul Sharma",
-  age: 23,
-  class: 12,
-  sex: "MALE",
-  isAdult: true,
-};
+// const personalData = {
+//   name: "Amul Sharma",
+//   age: 23,
+//   class: 12,
+//   sex: "MALE",
+//   isAdult: true,
+// };
 
-const address = {
-  city: "Mumbai",
-  state: "Maharashtra",
-};
+// const address = {
+//   city: "Mumbai",
+//   state: "Maharashtra",
+// };
 
-const personalDetails = { ...personalData, ...address };
-address.postCode = "2343";
-console.log(personalData);
-console.log(address);
-console.log(personalDetails);
+// const personalDetails = { ...personalData, ...address };
+// address.postCode = "2343";
+// console.log(personalData);
+// console.log(address);
+// console.log(personalDetails);
 
 // 3. using spread operator shallow copy if nested properties exist - in such case reference being copied
-const patientDetails = {
-  firstName: "Neeraj",
-  LastName: "khanna",
-  Sex: "Male",
-  implantList: ["HipPrimary", "HipRevision", "KneePrimary"],
-};
+// const patientDetails = {
+//   firstName: "Neeraj",
+//   LastName: "khanna",
+//   Sex: "Male",
+//   implantList: ["HipPrimary", "HipRevision", "KneePrimary"],
+// };
+
+// patientDetails.eirCode = "XLJLKJF89";
+// const demoPatientDetails = {...patientDetails};
+// patientDetails.countryCode = "India";
+// patientDetails.implantList.push("KneeRevision");
+
+// console.log(patientDetails);
+// console.log(demoPatientDetails);
 
 
-patientDetails.eirCode = "XLJLKJF89";
-const demoPatientDetails = {...patientDetails};
-patientDetails.countryCode = "India";
-patientDetails.implantList.push("KneeRevision");
+// --> using spread operator while invoking function that will pass as arguments individually.
+function colorPrinting(a, b, c, d,e) {
+  console.log("a", a);
+  console.log("b", b);
+  console.log("c", c);
+  console.log("d", d);
+  console.log("e",e);
+}
 
-console.log(patientDetails);
-console.log(demoPatientDetails);
+const colors = ["red", "blue", "green", "yellow"];
+colorPrinting(colors);
+console.log("-----------------");
+colorPrinting(...colors);
