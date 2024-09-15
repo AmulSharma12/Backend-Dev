@@ -289,17 +289,23 @@
 // menuItems(products);
 
 //=================================== JS - Destructuring - Nested Destructuring
-const patientData = [
-  { patientName: "alex", patientAge: 23, patientProcedure: "HipPrimary" },
-  { patientName: "jeremy", patientAge: 43, patientProcedure: "HipPrimary" },
-  { patientName: "Chris", patientAge: 33, patientProcedure: "KneeRevision" },
-  { patientName: "Rany", patientAge: 25, patientProcedure: "KneePrimary" },
-  { patientName: "Dope", patientAge: 29, patientProcedure: "HipRevision" },
-];
+// const patientData = [
+//   { patientName: "alex", patientAge: 23, patientProcedure: "HipPrimary" },
+//   { patientName: "jeremy", patientAge: 43, patientProcedure: "HipPrimary" },
+//   { patientName: "Chris", patientAge: 33, patientProcedure: "KneeRevision" },
+//   { patientName: "Rany", patientAge: 25, patientProcedure: "KneePrimary" },
+//   { patientName: "Dope", patientAge: 29, patientProcedure: "HipRevision" },
+// ];
 
-const [
-  ,
-  ,
-  { patientName: nameOfPatient, patientProcedure: procedureOfPatient },
-] = patientData;
-console.log(nameOfPatient, procedureOfPatient);
+// const [
+//   ,
+//   ,
+//   { patientName: nameOfPatient, patientProcedure: procedureOfPatient },
+// ] = patientData;
+// console.log(nameOfPatient, procedureOfPatient);
+
+//=================================== JS - Ternary Operator
+//Concise way of writing expression
+const myAge = 13;
+const isAdult = myAge >= 18 ? true : false;
+console.log(isAdult);
