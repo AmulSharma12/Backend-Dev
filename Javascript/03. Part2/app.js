@@ -219,10 +219,40 @@
 //Mostly used in functions
 
 //when we dont know the number of parameter is there we can use rest operator ... for packing all the arguments passed in array
-function sum(...numbers) {
-  console.log(numbers);
-  // return number1 + number2;
-}
+// function sum(...numbers) {
+//   console.log(numbers);
+// }
 
 //by this we can pass any number of arguments
-console.log(sum(2, 3));
+// console.log(sum(2, 3));
+
+//=================================== JS - Destructuring - Array Destructuring
+// Desctructuring allow us to make the object or array properties assigned to variable by unpacking it
+//Also can pass the default value in the Destructuring.
+const colors = ["Red", "Blue", "Green", "Yellow"];
+
+// const [...allColors] = colors;   //one way is to use spread operator for the colors object each object properties mapped to specific variable in sequence
+const [red, blue, green, yellow = "new"] = colors;
+console.log(red);
+console.log(blue);
+console.log(green);
+console.log(yellow);
+
+//DESTRUCTURING  - destructuring in function
+function studentName() {
+  return ["Amul Sharma", "Chirag Raikwar", "Ankit Patel"];
+}
+
+let a, b, c;
+[a, b, c] = studentName();
+[x, , z] = studentName(); //you can skip element in array destructuring by empty spaces at that specific parameter
+console.log(a);
+console.log(b);
+console.log(c);
+
+//------------------------------> Challenge - Array Destructuring
+const colorsArr = ["red" , "green", "blue", "yellow", "orange"]; 
+const [color1,color2,color3] = colorsArr;
+console.log(color1);
+console.log(color2);
+console.log(color3);
