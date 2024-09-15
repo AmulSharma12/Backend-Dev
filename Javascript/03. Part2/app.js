@@ -229,30 +229,51 @@
 //=================================== JS - Destructuring - Array Destructuring
 // Desctructuring allow us to make the object or array properties assigned to variable by unpacking it
 //Also can pass the default value in the Destructuring.
-const colors = ["Red", "Blue", "Green", "Yellow"];
+//In array destructuring order does matter but name doesnt
+// const colors = ["Red", "Blue", "Green", "Yellow"];
 
 // const [...allColors] = colors;   //one way is to use spread operator for the colors object each object properties mapped to specific variable in sequence
-const [red, blue, green, yellow = "new"] = colors;
-console.log(red);
-console.log(blue);
-console.log(green);
-console.log(yellow);
+// const [red, blue, green, yellow = "new"] = colors;
+// console.log(red);
+// console.log(blue);
+// console.log(green);
+// console.log(yellow);
 
 //DESTRUCTURING  - destructuring in function
-function studentName() {
-  return ["Amul Sharma", "Chirag Raikwar", "Ankit Patel"];
-}
+// function studentName() {
+//   return ["Amul Sharma", "Chirag Raikwar", "Ankit Patel"];
+// }
 
-let a, b, c;
-[a, b, c] = studentName();
-[x, , z] = studentName(); //you can skip element in array destructuring by empty spaces at that specific parameter
-console.log(a);
-console.log(b);
-console.log(c);
+// let a, b, c;
+// [a, b, c] = studentName();
+// [x, , z] = studentName(); //you can skip element in array destructuring by empty spaces at that specific parameter
+// console.log(a);
+// console.log(b);
+// console.log(c);
 
 //------------------------------> Challenge - Array Destructuring
-const colorsArr = ["red" , "green", "blue", "yellow", "orange"]; 
-const [color1,color2,color3] = colorsArr;
-console.log(color1);
-console.log(color2);
-console.log(color3);
+
+// const colorsArr = ["red" , "green", "blue", "yellow", "orange"]; 
+// const [color1,color2,color3] = colorsArr;
+// console.log(color1);
+// console.log(color2);
+// console.log(color3);
+
+
+
+
+//=================================== JS - Destructuring - Object Destructuring
+//In Object destructuring as well we do unpack object properties in a variable
+//In Object destructuring order does not matter but name does matter.
+const studentDetails = {name:"Amul Sharma", age:23, score:89};
+const {name,score, age} = studentDetails;
+const {name:personName,score:personScore, age:personAge} = studentDetails;
+
+console.log(name);
+console.log(score);
+console.log(age);
+
+console.log(personName);
+console.log(personScore);
+console.log(personAge);
+
