@@ -201,17 +201,28 @@
 // console.log(patientDetails);
 // console.log(demoPatientDetails);
 
-
 // --> using spread operator while invoking function that will pass as arguments individually.
-function colorPrinting(a, b, c, d,e) {
-  console.log("a", a);
-  console.log("b", b);
-  console.log("c", c);
-  console.log("d", d);
-  console.log("e",e);
+// function colorPrinting(a, b, c, d,e) {
+//   console.log("a", a);
+//   console.log("b", b);
+//   console.log("c", c);
+//   console.log("d", d);
+//   console.log("e",e);
+// }
+
+// const colors = ["red", "blue", "green", "yellow"];
+// colorPrinting(colors);
+// console.log("-----------------");
+// colorPrinting(...colors);
+
+//=================================== JS - ES6 - Rest Operator
+//Mostly used in functions
+
+//when we dont know the number of parameter is there we can use rest operator ... for packing all the arguments passed in array
+function sum(...numbers) {
+  console.log(numbers);
+  // return number1 + number2;
 }
 
-const colors = ["red", "blue", "green", "yellow"];
-colorPrinting(colors);
-console.log("-----------------");
-colorPrinting(...colors);
+//by this we can pass any number of arguments
+console.log(sum(2, 3));
