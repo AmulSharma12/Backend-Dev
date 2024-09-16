@@ -306,13 +306,36 @@
 
 //=================================== JS - Ternary Operator
 //Concise way of writing expression
-const myAge = 13;
-const isAdult = myAge >= 18 ? true : false;
-console.log(isAdult);
-
+// const myAge = 13;
+// const isAdult = myAge >= 18 ? true : false;
+// console.log(isAdult);
 
 //=================================== JS - For in loop
-const arr = [12,23,4,1,41];
-for(let index in arr){
-    console.log(index);
+// const arr = [12,23,4,1,41];
+// for(let index in arr){
+//     console.log(index);
+// }
+
+//=================================== JS - For of loop
+const arr = [12, 23, 4, 1, 41];
+const obj = { name: "Amul", firstName: "Ankit", lastName: "Chirag" };
+
+//for-in loop means iterating over the index (Array) or properties(Object)
+for (let ind in arr) {
+  console.log(ind);
+}
+
+for (let ind in obj) {
+  console.log(obj[ind]);
+}
+
+
+//for-of loop means iterating over the values (Array) 
+for (let ind of arr) {
+  console.log(ind);
+}
+
+let name = "Amul Sharma";
+for (let char of name) {
+  console.log(char);
 }
