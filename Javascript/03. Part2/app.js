@@ -309,3 +309,10 @@
 const myAge = 13;
 const isAdult = myAge >= 18 ? true : false;
 console.log(isAdult);
+
+
+//=================================== JS - For in loop
+const arr = [12,23,4,1,41];
+for(let index in arr){
+    console.log(index);
+}
