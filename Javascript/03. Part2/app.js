@@ -321,21 +321,33 @@ const arr = [12, 23, 4, 1, 41];
 const obj = { name: "Amul", firstName: "Ankit", lastName: "Chirag" };
 
 //for-in loop means iterating over the index (Array) or properties(Object)
-for (let ind in arr) {
-  console.log(ind);
-}
+// for (let ind in arr) {
+//   console.log(ind);
+// }
 
-for (let ind in obj) {
-  console.log(obj[ind]);
-}
+// for (let ind in obj) {
+//   console.log(obj[ind]);
+// }
 
+//for-of loop means iterating over the values (Array)
+// for (let ind of arr) {
+//   console.log(ind);
+// }
 
-//for-of loop means iterating over the values (Array) 
-for (let ind of arr) {
-  console.log(ind);
-}
+// let name = "Amul Sharma";
+// for (let char of name) {
+//   console.log(char);
+// }
 
-let name = "Amul Sharma";
-for (let char of name) {
-  console.log(char);
-}
+//=================================== JS - For each helper
+const colors = ["red", "blue", "green", "yellow"];
+const colorsObject = {
+  red: "red",
+  blue: "blue",
+  green: "green",
+  yellow: "yellow",
+};
+
+colors.forEach((color) => console.log(color));
+colors.forEach((color, index, colors) => console.log(color, index, colors));
+// colorsObject.forEach((color) => console.log(color));
