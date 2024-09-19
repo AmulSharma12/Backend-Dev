@@ -364,5 +364,52 @@ function y(x) {
   x();
 }
 
+//when higher order function need to be used lets say you have array and you have to calculate area, circumfrence, diameter
+const radius = [1, 2, 3, 4];
 
+const calculateArea = (radius) => {
+  const output = [];
+  radius.forEach((radius) => output.push(Math.PI * radius * radius));
+  return output;
+};
 
+console.log(calculateArea(radius));
+
+//if you have to calculate circumference & diameter
+const calculateCircumference = (radius) => {
+  const output = [];
+  radius.forEach((radius) => output.push(2 * Math.PI * radius));
+  return output;
+};
+
+console.log(calculateCircumference(radius));
+
+const calculateDiameter = (radius) => {
+  const output = [];
+  radius.forEach((radius) => output.push(2 * radius));
+  return output;
+};
+
+console.log(calculateDiameter(radius));
+
+// But still there is better way we can write this only logic is changed most of the part is almost the same
+
+//logic for calculating area
+const area = (radius) => Math.PI * radius * radius;
+const circumference = (radius) => 2 * Math.PI * radius;
+const diameter = (radius) => 2 * radius;
+
+//radius is my array and logic function we will pass
+const calculate = (inputArr, logic) => {
+  let output = [];
+  inputArr.forEach((element) => output.push(logic(element)));
+  return output;
+};
+
+const radiusOutput = calculate(radius, area);
+const circumferenceOutput = calculate(radius, circumference);
+const diameterOutput = calculate(radius, diameter);
+
+console.log(radiusOutput);
+console.log(circumferenceOutput);
+console.log(diameterOutput);
