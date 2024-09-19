@@ -340,14 +340,29 @@ const obj = { name: "Amul", firstName: "Ankit", lastName: "Chirag" };
 // }
 
 //=================================== JS - For each helper
-const colors = ["red", "blue", "green", "yellow"];
-const colorsObject = {
-  red: "red",
-  blue: "blue",
-  green: "green",
-  yellow: "yellow",
-};
+// const colors = ["red", "blue", "green", "yellow"];
+// const colorsObject = {
+//   red: "red",
+//   blue: "blue",
+//   green: "green",
+//   yellow: "yellow",
+// };
 
-colors.forEach((color) => console.log(color));
-colors.forEach((color, index, colors) => console.log(color, index, colors));
-// colorsObject.forEach((color) => console.log(color));
+// colors.forEach((color) => console.log(color));
+// colors.forEach((color, index, colors) => console.log(color, index, colors));
+// colorsObject.forEach((color) => console.log(color));  //error
+
+//=================================== JS - Higher order function
+//The function which (takes function as argument) or (returns a function as its output) called as
+//Higher order functions.
+
+function x() {
+  console.log("Callback function");
+}
+
+function y(x) {
+  x();
+}
+
+
+
