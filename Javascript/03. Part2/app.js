@@ -417,19 +417,48 @@ const obj = { name: "Amul", firstName: "Ankit", lastName: "Chirag" };
 //=================================== JS - Map
 // Map is also higher order function that map through each and every values through out the array
 // and used to transform the array by creating new array and returning output.
-const inputArr = [1, 2, 3, 4, 5];
+// const inputArr = [1, 2, 3, 4, 5];
 
-function double(x) {
-  return x * 2;
+// function double(x) {
+//   return x * 2;
+// }
+
+// function triple(x) {
+//   return x > 4;
+// }
+
+// const output1 = inputArr.map(double);
+// const output2 = inputArr.map(triple);
+// const output3 = inputArr.map((x) => x.toString(2));
+// console.log(output1);
+// console.log(output2);
+// console.log(output3);
+
+//=================================== JS - Filter
+// Array filter method js is also higher order function that map through each and every value
+// and filter the values out of the array.
+const inputArr = [
+  1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20,
+];
+
+function isEven(x) {
+  return x % 2 === 0;
+}
+function isOdd(x) {
+  return x % 2 !== 0;
 }
 
-function triple(x) {
-  return x > 4;
-}
+const oddNumbers = inputArr.filter(isOdd);
+const evenNumbers = inputArr.filter(isEven);
+const filterPrime = inputArr.filter((x) => {
+  let factor = 0;
 
-const output1 = inputArr.map(double);
-const output2 = inputArr.map(triple);
-const output3 = inputArr.map((x) => x.toString(2));
-console.log(output1);
-console.log(output2);
-console.log(output3);
+  for (let i = 1; i <= x; i++) {
+    if (x % i === 0) factor++;
+  }
+
+  return factor === 2;
+});
+
+console.log(filterPrime);
+
