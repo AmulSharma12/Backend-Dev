@@ -470,23 +470,48 @@ const obj = { name: "Amul", firstName: "Ankit", lastName: "Chirag" };
 // for e.g. - calculating sum or Max in array
 
 //example 1 - sum of the array using simple method & using reduce method for the map
-const inputArr = [12, 3, 34, 12, 42, 199];
+// const inputArr = [12, 3, 34, 12, 42, 199];
 
-function sumOfArray(inputArr) {
-  let result = 0;
-  for (let ind = 0; ind < inputArr.length; ind++) {
-    result += inputArr[ind];
+// function sumOfArray(inputArr) {
+//   let result = 0;
+//   for (let ind = 0; ind < inputArr.length; ind++) {
+//     result += inputArr[ind];
+//   }
+
+//   return result;
+// }
+
+// console.log(sumOfArray(inputArr));
+
+// // using reduce method
+// const sumOfArrayResult = inputArr.reduce((result, value) => {
+//   result += value;
+//   return result;
+// });
+
+// console.log(sumOfArrayResult);
+
+//-----Example 2 - finding the max of element in the array.
+const inputArr = [1, 2, 3, 45, 6342, 2353];
+
+//calculating max using the normal method
+function calculateMax(nums) {
+  if (nums.length == 0) return -1;
+  let maxNumber = -1;
+  for (let ind = 0; ind < nums.length; ind++) {
+    if (nums[ind] > maxNumber) maxNumber = nums[ind];
   }
 
-  return result;
+  return maxNumber;
 }
 
-console.log(sumOfArray(inputArr));
+console.log(calculateMax(inputArr));
 
-// using reduce method
-const sumOfArrayResult = inputArr.reduce((result, value) => {
-  result += value;
-  return result;
+//calculating using the reduce method
+const maxNumberUsingReduce = inputArr.reduce((acc, value) => {
+  debugger;
+  if (value > acc) acc = value;
+  return acc;
 });
 
-console.log(sumOfArrayResult);
+console.log(maxNumberUsingReduce);
