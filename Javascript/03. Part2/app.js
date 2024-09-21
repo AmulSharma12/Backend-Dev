@@ -492,26 +492,43 @@ const obj = { name: "Amul", firstName: "Ankit", lastName: "Chirag" };
 // console.log(sumOfArrayResult);
 
 //-----Example 2 - finding the max of element in the array.
-const inputArr = [1, 2, 3, 45, 6342, 2353];
+// const inputArr = [1, 2, 3, 45, 6342, 2353];
 
-//calculating max using the normal method
-function calculateMax(nums) {
-  if (nums.length == 0) return -1;
-  let maxNumber = -1;
-  for (let ind = 0; ind < nums.length; ind++) {
-    if (nums[ind] > maxNumber) maxNumber = nums[ind];
-  }
+// //calculating max using the normal method
+// function calculateMax(nums) {
+//   if (nums.length == 0) return -1;
+//   let maxNumber = -1;
+//   for (let ind = 0; ind < nums.length; ind++) {
+//     if (nums[ind] > maxNumber) maxNumber = nums[ind];
+//   }
 
-  return maxNumber;
-}
+//   return maxNumber;
+// }
 
-console.log(calculateMax(inputArr));
+// console.log(calculateMax(inputArr));
 
-//calculating using the reduce method
-const maxNumberUsingReduce = inputArr.reduce((acc, value) => {
-  debugger;
-  if (value > acc) acc = value;
-  return acc;
-});
+// //calculating using the reduce method
+// const maxNumberUsingReduce = inputArr.reduce((acc, value) => {
+//   debugger;
+//   if (value > acc) acc = value;
+//   return acc;
+// });
 
-console.log(maxNumberUsingReduce);
+// console.log(maxNumberUsingReduce);
+
+//=================================== JS - Practice map/filter/reduce
+const user = [
+  { firstName: "Amul", lastName: "Sharma", age: 23 },
+  { firstName: "Chirag", lastName: "Raikwar", age: 24 },
+  { firstName: "Ankit", lastName: "Patel", age: 25 },
+  { firstName: "Risabh", lastName: "Pant", age: 30 },
+  { firstName: "Neeraj", lastName: "Burla", age: 30 },
+];
+
+//filter out the full name from the user array - use of map
+const fullNameList = user.map((x) => x.firstName + " " + x.lastName);
+console.log(fullNameList);
+
+//filter out the user with age > 23 - use of age
+const userWithAgeGreater30 = user.filter((x) => x.age > 23);
+console.log(userWithAgeGreater30);
