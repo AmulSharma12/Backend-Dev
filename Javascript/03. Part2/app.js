@@ -356,60 +356,80 @@ const obj = { name: "Amul", firstName: "Ankit", lastName: "Chirag" };
 //The function which (takes function as argument) or (returns a function as its output) called as
 //Higher order functions.
 
-function x() {
-  console.log("Callback function");
-}
+// function x() {
+//   console.log("Callback function");
+// }
 
-function y(x) {
-  x();
-}
+// function y(x) {
+//   x();
+// }
 
 //when higher order function need to be used lets say you have array and you have to calculate area, circumfrence, diameter
-const radius = [1, 2, 3, 4];
+// const radius = [1, 2, 3, 4];
 
-const calculateArea = (radius) => {
-  const output = [];
-  radius.forEach((radius) => output.push(Math.PI * radius * radius));
-  return output;
-};
+// const calculateArea = (radius) => {
+//   const output = [];
+//   radius.forEach((radius) => output.push(Math.PI * radius * radius));
+//   return output;
+// };
 
-console.log(calculateArea(radius));
+// console.log(calculateArea(radius));
 
 //if you have to calculate circumference & diameter
-const calculateCircumference = (radius) => {
-  const output = [];
-  radius.forEach((radius) => output.push(2 * Math.PI * radius));
-  return output;
-};
+// const calculateCircumference = (radius) => {
+//   const output = [];
+//   radius.forEach((radius) => output.push(2 * Math.PI * radius));
+//   return output;
+// };
 
-console.log(calculateCircumference(radius));
+// console.log(calculateCircumference(radius));
 
-const calculateDiameter = (radius) => {
-  const output = [];
-  radius.forEach((radius) => output.push(2 * radius));
-  return output;
-};
+// const calculateDiameter = (radius) => {
+//   const output = [];
+//   radius.forEach((radius) => output.push(2 * radius));
+//   return output;
+// };
 
-console.log(calculateDiameter(radius));
+// console.log(calculateDiameter(radius));
 
 // But still there is better way we can write this only logic is changed most of the part is almost the same
 
 //logic for calculating area
-const area = (radius) => Math.PI * radius * radius;
-const circumference = (radius) => 2 * Math.PI * radius;
-const diameter = (radius) => 2 * radius;
+// const area = (radius) => Math.PI * radius * radius;
+// const circumference = (radius) => 2 * Math.PI * radius;
+// const diameter = (radius) => 2 * radius;
 
-//radius is my array and logic function we will pass
-const calculate = (inputArr, logic) => {
-  let output = [];
-  inputArr.forEach((element) => output.push(logic(element)));
-  return output;
-};
+// //radius is my array and logic function we will pass
+// const calculate = (inputArr, logic) => {
+//   let output = [];
+//   inputArr.forEach((element) => output.push(logic(element)));
+//   return output;
+// };
 
-const radiusOutput = calculate(radius, area);
-const circumferenceOutput = calculate(radius, circumference);
-const diameterOutput = calculate(radius, diameter);
+// const radiusOutput = calculate(radius, area);
+// const circumferenceOutput = calculate(radius, circumference);
+// const diameterOutput = calculate(radius, diameter);
 
-console.log(radiusOutput);
-console.log(circumferenceOutput);
-console.log(diameterOutput);
+// console.log(radiusOutput);
+// console.log(circumferenceOutput);
+// console.log(diameterOutput);
+
+//=================================== JS - Map
+// Map is also higher order function that map through each and every values through out the array
+// and used to transform the array by creating new array and returning output.
+const inputArr = [1, 2, 3, 4, 5];
+
+function double(x) {
+  return x * 2;
+}
+
+function triple(x) {
+  return x > 4;
+}
+
+const output1 = inputArr.map(double);
+const output2 = inputArr.map(triple);
+const output3 = inputArr.map((x) => x.toString(2));
+console.log(output1);
+console.log(output2);
+console.log(output3);
