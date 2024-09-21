@@ -437,28 +437,56 @@ const obj = { name: "Amul", firstName: "Ankit", lastName: "Chirag" };
 //=================================== JS - Filter
 // Array filter method js is also higher order function that map through each and every value
 // and filter the values out of the array.
-const inputArr = [
-  1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20,
-];
+// const inputArr = [
+//   1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20,
+// ];
 
-function isEven(x) {
-  return x % 2 === 0;
-}
-function isOdd(x) {
-  return x % 2 !== 0;
-}
+// function isEven(x) {
+//   return x % 2 === 0;
+// }
+// function isOdd(x) {
+//   return x % 2 !== 0;
+// }
 
-const oddNumbers = inputArr.filter(isOdd);
-const evenNumbers = inputArr.filter(isEven);
-const filterPrime = inputArr.filter((x) => {
-  let factor = 0;
+// const oddNumbers = inputArr.filter(isOdd);
+// const evenNumbers = inputArr.filter(isEven);
+// const filterPrime = inputArr.filter((x) => {
+//   let factor = 0;
 
-  for (let i = 1; i <= x; i++) {
-    if (x % i === 0) factor++;
+//   for (let i = 1; i <= x; i++) {
+//     if (x % i === 0) factor++;
+//   }
+
+//   return factor === 2;
+// });
+
+// console.log(filterPrime);
+
+//=================================== JS - Reduce
+// Reduce is also used as higher order function that takes 2 arguments
+// 1. acc - accumulator that represent the value that we are calculating.
+// 2. value - represents the value when we iterate through the array.
+
+// for e.g. - calculating sum or Max in array
+
+//example 1 - sum of the array using simple method & using reduce method for the map
+const inputArr = [12, 3, 34, 12, 42, 199];
+
+function sumOfArray(inputArr) {
+  let result = 0;
+  for (let ind = 0; ind < inputArr.length; ind++) {
+    result += inputArr[ind];
   }
 
-  return factor === 2;
+  return result;
+}
+
+console.log(sumOfArray(inputArr));
+
+// using reduce method
+const sumOfArrayResult = inputArr.reduce((result, value) => {
+  result += value;
+  return result;
 });
 
-console.log(filterPrime);
-
+console.log(sumOfArrayResult);
