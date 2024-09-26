@@ -517,6 +517,23 @@ const obj = { name: "Amul", firstName: "Ankit", lastName: "Chirag" };
 // console.log(maxNumberUsingReduce);
 
 //=================================== JS - Practice map/filter/reduce
+// const user = [
+//   { firstName: "Amul", lastName: "Sharma", age: 23 },
+//   { firstName: "Chirag", lastName: "Raikwar", age: 24 },
+//   { firstName: "Ankit", lastName: "Patel", age: 25 },
+//   { firstName: "Risabh", lastName: "Pant", age: 30 },
+//   { firstName: "Neeraj", lastName: "Burla", age: 30 },
+// ];
+
+// //filter out the full name from the user array - use of map
+// const fullNameList = user.map((x) => x.firstName + " " + x.lastName);
+// console.log(fullNameList);
+
+// //filter out the user with age > 23 - use of age
+// const userWithAgeGreater30 = user.filter((x) => x.age > 23);
+// console.log(userWithAgeGreater30);
+
+//=================================== JS - Array - every and some method
 const user = [
   { firstName: "Amul", lastName: "Sharma", age: 23 },
   { firstName: "Chirag", lastName: "Raikwar", age: 24 },
@@ -525,10 +542,9 @@ const user = [
   { firstName: "Neeraj", lastName: "Burla", age: 30 },
 ];
 
-//filter out the full name from the user array - use of map
-const fullNameList = user.map((x) => x.firstName + " " + x.lastName);
-console.log(fullNameList);
+console.log(user);
+const everyResp = user.every((person) => person.age < 18);
+console.log(everyResp);
 
-//filter out the user with age > 23 - use of age
-const userWithAgeGreater30 = user.filter((x) => x.age > 23);
-console.log(userWithAgeGreater30);
+const someResp = user.some((person) => person.age > 25);
+console.log(someResp)
