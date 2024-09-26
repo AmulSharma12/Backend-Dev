@@ -534,17 +534,65 @@ const obj = { name: "Amul", firstName: "Ankit", lastName: "Chirag" };
 // console.log(userWithAgeGreater30);
 
 //=================================== JS - Array - every and some method
-const user = [
-  { firstName: "Amul", lastName: "Sharma", age: 23 },
-  { firstName: "Chirag", lastName: "Raikwar", age: 24 },
-  { firstName: "Ankit", lastName: "Patel", age: 25 },
-  { firstName: "Risabh", lastName: "Pant", age: 30 },
-  { firstName: "Neeraj", lastName: "Burla", age: 30 },
-];
+// const user = [
+//   { firstName: "Amul", lastName: "Sharma", age: 23 },
+//   { firstName: "Chirag", lastName: "Raikwar", age: 24 },
+//   { firstName: "Ankit", lastName: "Patel", age: 25 },
+//   { firstName: "Risabh", lastName: "Pant", age: 30 },
+//   { firstName: "Neeraj", lastName: "Burla", age: 30 },
+// ];
 
-console.log(user);
-const everyResp = user.every((person) => person.age < 18);
-console.log(everyResp);
+// console.log(user);
+// const everyResp = user.every((person) => person.age < 18);
+// console.log(everyResp);
 
-const someResp = user.some((person) => person.age > 25);
-console.log(someResp)
+// const someResp = user.some((person) => person.age > 25);
+// console.log(someResp)
+
+//=================================== JS - Map data structure
+// Map is Built-in data structure introduced in ES6 that allow you to store data in key:value pairs
+// Just like objects but in objects we can store key for type limited to string and symbol
+// But here in map allow you to store any type of key:value pairs
+
+//how to create a map - Prototype map
+const map = new Map();
+
+//printing the empty map
+console.log(map);
+
+//defining keys for the map
+const key1 = "stringType";
+const key2 = {};
+const key3 = function () {};
+
+//printing the map size
+console.log(map.size);
+
+//setting the map
+map.set(key1, "key1 value");
+map.set(key2, "key2 value");
+map.set(key3, "key3 value");
+
+//printing the map size
+console.log(map);
+console.log(map.size);
+console.log(map.keys()); //for listing all the keys in the map Prototype - MapIterator
+console.log(map.values()); //for listing all the values in the map Prototype - MapIterator
+
+console.log("---------------Looping for key value pair both");
+//now looping part of map
+for (let [key, value] of map) {
+  console.log(`${key} - ${value}`);
+}
+
+console.log("--------------Looping for only the keys");
+//for now looping only for the keys
+for (let key of map.keys()) {
+  console.log(key);
+}
+
+console.log("-------------Looping for only the values");
+//for now looping only for the values
+for (let value of map.values()) {
+  console.log(value);
+}
