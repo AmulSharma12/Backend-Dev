@@ -650,10 +650,29 @@ const obj = { name: "Amul", firstName: "Ankit", lastName: "Chirag" };
 // }
 
 //=================================== JS - Set Practice
-const letters = new Set();
+// const letters = new Set();
 
-letters.add("a");
-letters.add("b");
-letters.add("c");
+// letters.add("a");
+// letters.add("b");
+// letters.add("c");
 
-console.log(letters);
+// console.log(letters);
+
+//=================================== JS - Symbol
+//Symbol is a unique & immutable(value cannot be changed) primitive data type introduced in ES6 .A symbol is often used for object properties to avoid naming conflicts.
+
+//When you create a symbol it should be unique and cannot be recreated or regenerated
+
+const symbol1 = Symbol("name");
+const symbol2 = Symbol("name");
+
+const student = {};
+student.age = 23;
+student.symbol1 = "Symbol 1";
+student.symbol2 = "Symbol 2";
+student["class"] = "Upper level";
+
+console.log(student.age);
+console.log(student.symbol1);
+console.log(student.symbol2);
+console.log(student.class);
