@@ -618,33 +618,42 @@ const obj = { name: "Amul", firstName: "Ankit", lastName: "Chirag" };
 // Set is built-in data structure introduced in ES6
 // that allows us to store the unique values in the set data strcuture
 
-//One way
-const initialValues = [12, 12, 14, 15];
+// //One way
+// const initialValues = [12, 12, 14, 15];
 
-//using constructor creating set
-const set = new Set(initialValues);
-console.log(set);
-console.log(set.size);
+// //using constructor creating set
+// const set = new Set(initialValues);
+// console.log(set);
+// console.log(set.size);
 
-//Creating new Set
-const mySet = new Set();
+// //Creating new Set
+// const mySet = new Set();
 
-//Adding value to the set
-mySet.add(12);
-mySet.add("Amul");
-mySet.add("Amul");
-mySet.add("Sharma");
-mySet.add(4);
+// //Adding value to the set
+// mySet.add(12);
+// mySet.add("Amul");
+// mySet.add("Amul");
+// mySet.add("Sharma");
+// mySet.add(4);
 
-console.log(mySet);
-console.log(mySet.size);
+// console.log(mySet);
+// console.log(mySet.size);
 
-//deleting the value from the set
-mySet.delete("Sharma");
-console.log(mySet);
-console.log(mySet.size);
+// //deleting the value from the set
+// mySet.delete("Sharma");
+// console.log(mySet);
+// console.log(mySet.size);
 
-//Looping over the set
-for (let element of mySet) {
-  console.log(typeof element + " " + element);
-}
+// //Looping over the set
+// for (let element of mySet) {
+//   console.log(typeof element + " " + element);
+// }
+
+//=================================== JS - Set Practice
+const letters = new Set();
+
+letters.add("a");
+letters.add("b");
+letters.add("c");
+
+console.log(letters);
