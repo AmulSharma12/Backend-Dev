@@ -681,14 +681,14 @@ const obj = { name: "Amul", firstName: "Ankit", lastName: "Chirag" };
 // console.log(student.class);
 
 //=================================== JS - Symbol Practice
-const mySymbol = Symbol("foo");
-console.log(typeof mySymbol);
+// const mySymbol = Symbol("foo");
+// console.log(typeof mySymbol);
 
-const object = {};
-object[mySymbol] = "custom symbol value 1";
-console.log(mySymbol);
-console.log(object.mySymbol);
+// const object = {};
+// object[mySymbol] = "custom symbol value 1";
+// console.log(mySymbol);
+// console.log(object.mySymbol);
 
-for (let element in object) {
-  console.log(element);
-}
+// for (let element in object) {
+//   console.log(element);
+// }
