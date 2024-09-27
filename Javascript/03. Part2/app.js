@@ -663,16 +663,32 @@ const obj = { name: "Amul", firstName: "Ankit", lastName: "Chirag" };
 
 //When you create a symbol it should be unique and cannot be recreated or regenerated
 
-const symbol1 = Symbol("name");
-const symbol2 = Symbol("name");
+// const symbol1 = Symbol("name");
+// const symbol2 = Symbol("name");
+// console.log(symbol1 == symbol2);
+// console.log(symbol1 === symbol2);
 
-const student = {};
-student.age = 23;
-student.symbol1 = "Symbol 1";
-student.symbol2 = "Symbol 2";
-student["class"] = "Upper level";
+// const student = {};
+// student.age = 23;
+// student[symbol1] = "Symbol 1";
+// student[symbol2] = "Symbol 2";
+// student["class"] = "Upper level";
 
-console.log(student.age);
-console.log(student.symbol1);
-console.log(student.symbol2);
-console.log(student.class);
+// console.log(student);
+// console.log(student.age);
+// console.log(student.symbol1);
+// console.log(student.symbol2);
+// console.log(student.class);
+
+//=================================== JS - Symbol Practice
+const mySymbol = Symbol("foo");
+console.log(typeof mySymbol);
+
+const object = {};
+object[mySymbol] = "custom symbol value 1";
+console.log(mySymbol);
+console.log(object.mySymbol);
+
+for (let element in object) {
+  console.log(element);
+}
