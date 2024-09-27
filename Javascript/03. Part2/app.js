@@ -598,18 +598,53 @@ const obj = { name: "Amul", firstName: "Ankit", lastName: "Chirag" };
 // }
 
 //=================================== JS - Map Excercise
-const map = new Map();
+// const map = new Map();
 
-const key1 = "a";
-const key2 = "b";
-const key3 = "c";
+// const key1 = "a";
+// const key2 = "b";
+// const key3 = "c";
 
-map.set(key1, 1);
-map.set(key2, 2);
-map.set(key3, 3);
+// map.set(key1, 1);
+// map.set(key2, 2);
+// map.set(key3, 3);
 
-console.log(map.get(key1));
-console.log(map.size);
+// console.log(map.get(key1));
+// console.log(map.size);
 
-map.delete(key3);
-console.log(map.size);
+// map.delete(key3);
+// console.log(map.size);
+
+//=================================== JS - Set
+// Set is built-in data structure introduced in ES6
+// that allows us to store the unique values in the set data strcuture
+
+//One way
+const initialValues = [12, 12, 14, 15];
+
+//using constructor creating set
+const set = new Set(initialValues);
+console.log(set);
+console.log(set.size);
+
+//Creating new Set
+const mySet = new Set();
+
+//Adding value to the set
+mySet.add(12);
+mySet.add("Amul");
+mySet.add("Amul");
+mySet.add("Sharma");
+mySet.add(4);
+
+console.log(mySet);
+console.log(mySet.size);
+
+//deleting the value from the set
+mySet.delete("Sharma");
+console.log(mySet);
+console.log(mySet.size);
+
+//Looping over the set
+for (let element of mySet) {
+  console.log(typeof element + " " + element);
+}
