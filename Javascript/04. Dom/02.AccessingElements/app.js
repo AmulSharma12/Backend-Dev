@@ -21,6 +21,7 @@ console.log(h1ElementWithTagName);
 const h1 = document.querySelector("h1");
 const h1WithClass = document.querySelector(".text-color");
 const h1WithId = document.querySelector("#uniqueElement");
+const noElement = document.querySelector("#wrongValues");  //null
 
 console.log(h1);
 console.log(h1WithClass);

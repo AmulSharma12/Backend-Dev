@@ -313,7 +313,7 @@
 // const intervalId = setInterval(function name(params) {
 //   console.log(`this function is executed at being interval`);
 // }, 1000);
-
+M
 //stop the interval after 10 second
 // setTimeout(function () {
 //   clearInterval(intervalId);
